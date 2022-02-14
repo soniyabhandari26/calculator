@@ -1,0 +1,22 @@
+{
+	background-color: #ffffcc;
+}
+
+.grid{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/*
+.full{
+	align-content: center;
+	margin-left: 400px;
+	margin-right: 400px;
+	display: table;
+	justify-content: center;
+}
+
+
+
+*/

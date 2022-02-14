@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+</head>
+<body>
+  <div class="grid">
+	<div class="heading">
+		<h1> CALCULATOR </h1>
+	</div>
+	
+	<div class="full">
+	<input type="number" name="firstNumber" placeholder="Enter the first number" id="num1">&nbsp &nbsp
+	<input type="number" name="secondNumber" placeholder="Enter the second number" id="num2"><br><br>
+    <button onclick="myAddition()"> ADD</button>&nbsp
+    <button onclick="mySub()"> SUB</button>&nbsp
+    <button onclick="myMul()"> MUL</button>&nbsp
+    <button onclick="myDiv()"> DIV</button>&nbsp
+    <button onclick="mySqrt()"> SQRT</button>&nbsp
+    <button onclick="myCbrt()"> CBRT</button>&nbsp
+    <!-- <button onclick="myPower()"> POWER</button> -->
+    <button onclick="myClear()">CLR</button><br><br>
+    <label id="res">0</label>
+    <script type="text/javascript">
+    	//console.log("soniya");
+    	function myAddition(){
+    		x = document.getElementById('num1');
+    		console.log(x.value);
+    		y = document.getElementById('num2');
+    		console.log(y.value); 
+    		z = parseFloat(x.value) + parseFloat(y.value);
+    		console.log(z.toFixed(2));
+    	    document.getElementById('res').innerHTML = z.toFixed(2);
+    	}
+
+    	function mySub(){
+    		x = document.getElementById('num1');
+    		console.log(x.value);
+    		y = document.getElementById('num2');
+    		console.log(y.value); 
+    		z = parseFloat(x.value) - parseFloat(y.value);
+    		console.log(z.toFixed(2));
+    	    document.getElementById('res').innerHTML = z.toFixed(2);
+    	}
+
+      	function myMul(){
+    		x = document.getElementById('num1');
+    		console.log(x.value);
+    		y = document.getElementById('num2');
+    		console.log(y.value); 
+    		z = parseFloat(x.value) * parseFloat(y.value);
+    		console.log(z.toFixed(2));
+    	    document.getElementById('res').innerHTML = z.toFixed(2);
+    	}
+
+    	function myDiv(){
+    		x = document.getElementById('num1');
+    		console.log(x.value);
+    		y = document.getElementById('num2');
+    		console.log(y.value); 
+    		z = parseFloat(x.value) / parseFloat(y.value);
+    		console.log(z.toFixed(2));
+    	    document.getElementById('res').innerHTML = z.toFixed(2);
+    	}
+
+    	function mySqrt(){
+    		x = document.getElementById('num1');
+    		console.log(x.value);
+    		z = parseFloat(x.value);
+            document.getElementById('res').innerHTML = Math.sqrt(z).toFixed(2);
+     	}
+
+     	function myCbrt(){
+    		x = document.getElementById('num1');
+    		console.log(x.value);
+    		z = parseFloat(x.value);
+            document.getElementById('res').innerHTML = Math.cbrt(z).toFixed(2);
+     	}
+
+     // 	function myPower(){
+    	// 	x = document.getElementById('num1');
+    	// 	console.log(x.value);
+    	// 	y = document.getElementById('num2');
+    	// 	console.log(y.value); 
+    	// 	// z = Math.pow((parseFloat(x.value), parseFloat(y.value));
+    	// 	// console.log(z.toFixed(2));
+    	//     document.getElementById('res').innerHTML = Math.pow(x, y);
+    	// }
+
+
+    	function myClear(){
+    		document.getElementById('num1').value = '';
+            document.getElementById('num2').value = '';
+            document.getElementById('res').innerHTML = 0;
+     	}
+    </script>
+    </div>
+  </div>
+</body>
+</html>
